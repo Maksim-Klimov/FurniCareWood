@@ -1,0 +1,148 @@
+.questions {
+  position: relative;
+  background-color: var(--white-color);
+
+  // .questions__title
+
+  &__title {
+    text-align: center;
+    margin-bottom: 4rem;
+  }
+
+  // .questions__container
+
+  &__container {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 60px;
+
+    @include tablet {
+      gap: 20px;
+    }
+
+    @include small-tablet {
+      grid-template-columns: repeat(6, 1fr);
+    }
+  }
+
+  // .questions__image
+
+  &__image {
+    overflow: hidden;
+    grid-column: 5 span;
+    border-radius: .5rem;
+
+    @include high-tablet {
+      grid-column: 6 span;
+    }
+  }
+
+  // .questions__img
+
+  &__img {
+    border-radius: .5rem;
+
+    @include small-tablet {
+      height: 250px;
+    }
+  }
+
+  // .questions__list-block
+
+  &__list-block {
+    grid-column: 7 span;
+
+    @include high-tablet {
+      grid-column: 6 span;
+
+    }
+  }
+
+  // .questions__list
+
+  &__list {
+    position: relative;
+    overflow: hidden;
+  }
+
+  // .questions__item
+
+  &__item {
+    padding: 1.4rem;
+    border-radius: .5rem;
+    margin-bottom: 1.6rem;
+    background-color: var(--light-color);
+
+    &.active .questions__item-description {
+      opacity: 1;
+      padding: 20px 0;
+      visibility: visible;
+      max-height: max-content;
+    }
+    &.active .questions__icon {
+      transform: rotate(-180deg);
+    }
+
+    @include high-tablet {
+      padding: 1rem;
+    }
+
+  }
+
+  // .questions__item-title
+
+  &__item-title {
+    @include flex-all-sb;
+
+    cursor: pointer;
+    min-height: 3rem;
+    font-size: 2.3rem;
+    font-weight: 500;
+
+    @include tablet {
+      font-size: 1.8rem;
+    }
+
+    @include high-tablet {
+      font-size: 1.6rem;
+    }
+  }
+
+  // .questions__icon
+
+  &__icon {
+    width: 2rem;
+    height: 2rem;
+    overflow: hidden;
+    transform: rotate(0);
+    transition: all .4s cubic-bezier(0.215, 0.610, 0.355, 1);
+  }
+
+  // .questions__icon-svg
+
+  &__icon-svg {
+    width: 100%;
+    height: 100%;
+    fill: currentColor;
+    color: var(--text-color-light);
+  }
+
+  // .questions__item-description
+
+  &__item-description {
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+    visibility: hidden;
+    padding: 0;
+    will-change: max-height;
+    position: relative;
+    font-size: 1.7rem;
+    color: var(--text-color-light);
+    transition: all .4s cubic-bezier(0.215, 0.610, 0.355, 1);
+
+    @include tablet {
+      font-size: 1.6rem;
+    }
+  }
+}

@@ -1,0 +1,148 @@
+.contacts {
+  position: relative;
+  overflow: hidden;
+  background-color: var(--white-color);
+
+  // .contacts__bg-logo
+
+  &__bg-logo {
+    position: absolute;
+    left: 0;
+    bottom: -40px;
+  }
+
+  // .contacts__logo
+
+  &__logo {
+    // position: absolute;
+
+    @include big-desktop {
+      width: 550px;
+    }
+
+    @include mobile-L {
+      min-width: 100%;
+    }
+  }
+
+  // .contacts__form-block
+
+  &__form-block {
+    position: relative;
+    width: 100%;
+  }
+
+  // .contacts__title
+
+  &__title {
+    text-align: center;
+    margin-bottom: 4rem;
+
+    @include tablet {
+      margin-bottom: 2rem;
+    }
+  }
+
+  // .contacts__form
+
+  &__form {
+    text-align: center;
+    max-width: 800px;
+    margin-left: auto;
+
+    @include big-desktop {
+      max-width: 500px;
+    }
+
+    @include tablet {
+      max-width: 400px;
+    }
+
+    @include high-tablet {
+      margin-right: auto;
+    }
+  }
+
+  // .contacts__container
+
+  &__container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 3.1rem;
+    @include big-desktop {
+      flex-direction: column;
+    }
+  }
+
+  // .contacts__label
+
+  &__label {
+    width: 100%;
+
+    &:not(:last-child) {
+      margin-right: 3.5rem;
+      @include big-desktop {
+        margin-right: 0;
+        margin-bottom: 1.5rem;
+      }
+    }
+  }
+
+  // .contacts__input
+
+  &__input {
+    padding: 2.7rem;
+    text-align: center;
+    border: 1px solid var(--text-color-light);
+    border-radius: .5rem;
+    min-width: 100%;
+    font-size: 2.5rem;
+
+    @include tablet {
+      font-size: 2rem;
+    }
+
+    @include mobile-L {
+      padding: 2.2rem;
+    }
+
+  }
+
+  // .contacts__btn
+
+  &__btn {
+    margin-bottom: 1.6rem;
+    display: inline-block;
+    text-align: center;
+    font-weight: 500;
+    border-radius: 0.5rem;
+    padding: 2.7rem;
+    min-width: 350px;
+    color: var(--white-color);
+    background-color: var(--green-color);
+    transition: background-color 0.45s cubic-bezier(0.215, 0.61, 0.355, 1),
+      box-shadow 0.55s cubic-bezier(0.215, 0.61, 0.355, 1);
+
+    @include hover {
+      background-color: hsl(96, 31%, 52%);
+      box-shadow: 0 1px 10px 1px hsla(95, 18%, 24%, 0.5);
+    }
+
+    @include mobile-L {
+      min-width: 100%;
+    }
+  }
+
+  // .contacts__policy
+
+  &__policy {
+    margin-left: auto;
+    margin-right: auto;
+    color: var(--text-color-light);
+    font-size: 1.5rem;
+    font-weight: 500;
+    max-width: 350px;
+    text-align: center;
+  }
+}

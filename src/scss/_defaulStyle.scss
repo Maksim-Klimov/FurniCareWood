@@ -1,0 +1,17 @@
+.container {
+  margin: 0 auto;
+  padding: 0 var(--container-offset);
+  max-width: var(--container-width);
+  width: 100%;
+}
+
+.section-offset {
+  padding: 60px 0 60px;
+  @include tablet {
+    padding: 40px 0;
+  }
+
+  @include high-tablet {
+    padding: 20px 0;
+  }
+}

@@ -1,0 +1,103 @@
+.project {
+  background-color: var(--white-color);
+  position: relative;
+  // .project__title
+
+  &__title {
+    margin-bottom: 4rem;
+    text-align: center;
+
+    @include high-desktop {
+      margin-bottom: 2rem;
+    }
+  }
+
+  &__wrapper {
+    position: relative;
+    text-align: center;
+  }
+
+  // .project__container
+
+  &__container {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-auto-rows: 180px;
+    gap: 40px;
+
+    @include high-desktop {
+      gap: 20px;
+    }
+
+    @include high-tablet {
+      grid-auto-rows: 120px;
+    }
+
+    @include mobile-L {
+      grid-template-columns: repeat(4, 1fr);
+    }
+  }
+
+  // .project__list
+
+  &__list {
+    position: relative;
+    margin-bottom: 3.5rem;
+  }
+
+  // .project__item
+
+  &__item {
+    overflow: hidden;
+    border-radius: 1rem;
+    grid-column: 6 span;
+    grid-row: 2 span;
+    &:nth-child(2) {
+      grid-row: 3 span;
+      @include mobile-L {
+        grid-row: 2 span;
+      }
+    }
+    &:nth-child(3) {
+      grid-row: 3 span;
+      @include mobile-L {
+        grid-row: 2 span;
+      }
+    }
+  }
+
+  &__image {
+    cursor: pointer;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.5s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+
+    @include hover {
+      transform: scale(1.2);
+    }
+  }
+
+  // .project__catalog
+
+  &__catalog {
+    display: inline-block;
+    text-align: center;
+    font-weight: 500;
+    border-radius: 0.5rem;
+    padding: 2.5rem 3rem;
+    min-width: 215px;
+    color: var(--white-color);
+    background-color: var(--green-color);
+    transition: background-color 0.45s cubic-bezier(0.215, 0.61, 0.355, 1),
+    box-shadow 0.55s cubic-bezier(0.215, 0.61, 0.355, 1);
+
+  @include hover {
+    background-color: hsl(96, 31%, 52%);
+    box-shadow: 0 1px 10px 1px hsla(95, 18%, 24%, 0.5);
+  }
+
+  @include small-tablet {
+    padding: 2rem;
+  }
+  }
+}

@@ -1,0 +1,106 @@
+.home {
+  @include bg-cover;
+
+  padding-top: 200px;
+  padding-bottom: 50px;
+  min-height: 100vh;
+  background-color: #eaeaea;
+  background-image: url(../../img/bg-main.webp);
+
+  // .home__title
+
+  &__title {
+    margin-bottom: 2.5rem;
+    font-size: 6.35rem;
+    line-height: 100%;
+    font-weight: 700;
+    letter-spacing: 0.17rem;
+    max-width: 500px;
+
+    @include high-tablet {
+      margin-left: auto;
+      margin-right: auto;
+      text-align: center;
+    }
+
+    @include small-tablet {
+      font-size: 4.5rem;
+      letter-spacing: 0;
+    }
+
+    @include mobile-L {
+      font-size: 3.5rem;
+    }
+  }
+
+  // .home__subtitle
+
+  &__subtitle {
+    margin-bottom: 80px;
+    font-size: 2.3rem;
+    font-weight: 500;
+    max-width: 500px;
+
+    @include high-tablet {
+      margin-left: auto;
+      margin-right: auto;
+      text-align: center;
+    }
+
+    @include small-tablet {
+      font-size: 2.1rem;
+    }
+
+    @include mobile-L {
+      font-size: 1.85rem;
+    }
+
+  }
+
+  // .home__call
+
+  &__call {
+    @include high-tablet {
+      text-align: center;
+    }
+  }
+
+  // .home__link
+
+  &__link {
+    margin-bottom: 150px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 215px;
+    background-color: var(--green-color);
+    border-radius: 0.5rem;
+    padding: 2.5rem 3rem;
+    color: var(--white-color);
+    transition: background-color 0.45s cubic-bezier(0.215, 0.61, 0.355, 1),
+      box-shadow 0.55s cubic-bezier(0.215, 0.61, 0.355, 1);
+
+    @include hover {
+      background-color: hsl(96, 31%, 52%);
+      box-shadow: 0 1px 10px 1px hsla(95, 18%, 24%, 0.5);
+    }
+  }
+}
+
+.social-block {
+  position: relative;
+  // .social-block__link
+
+  &__link {
+    display: inline-block;
+    width: 35px;
+    height: 35px;
+  }
+
+  &__image-size {
+  }
+
+  @include high-tablet {
+    text-align: center;
+  }
+}
