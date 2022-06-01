@@ -37,3 +37,6 @@
 └── .stylelintrc                  # файл с настройками stylelint
 └── README.md                     # документация сборки
 ```
+
+## Full page screen
+![FurniCare](https://i.ibb.co/M5Q0z2s/furnicare.png)
